@@ -1,7 +1,4 @@
-//import { useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom';
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css'
 import Ecom from './pages/Ecom/Ecom'
 import Feature from './pages/Feature/Feature'
@@ -11,15 +8,16 @@ import Resume from './pages/Resume/Resume'
 export default function App() {
   return (
     <div>
-      <nav style={{ padding:'' 1', background: #eee' }}>
-        <Link to="/Ecom" style={{ marginRight: 'irem' }}>Ecom</Link>
-        <Link to="/Feature" style={{ marginRight: 'lrem' }}>Feature</Link>
+
+      <nav style={{ padding: '1em', background: '#eee'}}>
+        <Link to="/Ecom" style={{ marginRight: 'irem' }}>Ecom </Link>
+        <Link to="/Feature" style={{ marginRight: 'lrem' }}>Feature </Link>
         <Link to="/Resume">Resume</Link>
       </nav>
       <Routes>
-        <Route path="/Ecom" element={<Ecom />} />
-        <Route path="/Feature" element={<Feature />} />
-        <Route path="/Resume" element={<Resume />} />
+        <Route path="/Ecom" element={< Ecom />} />
+        <Route path="/Feature" element={< Feature />} />
+        <Route path="/Resume" element={< Resume/>} />
       </Routes>
     </div>
 

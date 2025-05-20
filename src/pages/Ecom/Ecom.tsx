@@ -1,5 +1,4 @@
 function Ecom(){
-    <h1>Ecom</h1>
+    return <h1> E c o m </h1>
 }
-
 export default Ecom;
