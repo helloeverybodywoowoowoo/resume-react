@@ -10,14 +10,16 @@ export default function App() {
     <div>
 
       <nav style={{ padding: '1em', background: '#eee'}}>
-        <Link to="/Ecom" style={{ marginRight: 'irem' }}>Ecom </Link>
-        <Link to="/Feature" style={{ marginRight: 'lrem' }}>Feature </Link>
+        {/* <Link to="/Ecom" style={{ marginRight: 'irem' }}>Ecom </Link>
+        <Link to="/Feature" style={{ marginRight: 'lrem' }}>Feature </Link> */}
+        <Link to="/Ecom">Ecom </Link>
+        <Link to="/Feature">Feature </Link>
         <Link to="/Resume">Resume</Link>
       </nav>
       <Routes>
         <Route path="/Ecom" element={< Ecom />} />
         <Route path="/Feature" element={< Feature />} />
-        <Route path="/Resume" element={< Resume/>} />
+        <Route path="/Resume" element={< Resume />} />
       </Routes>
     </div>
 
