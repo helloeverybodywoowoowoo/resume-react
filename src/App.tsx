@@ -8,18 +8,25 @@ import Resume from './pages/Resume/Resume'
 export default function App() {
   return (
     <div>
-
+      {/* TODO: add a home page */}
+    
       <nav style={{ padding: '1em', background: '#eee'}}>
         {/* <Link to="/Ecom" style={{ marginRight: 'irem' }}>Ecom </Link>
         <Link to="/Feature" style={{ marginRight: 'lrem' }}>Feature </Link> */}
-        <Link to="/Ecom">Ecom </Link>
-        <Link to="/Feature">Feature </Link>
-        <Link to="/Resume">Resume</Link>
+        <Link to="/resume-react/Ecom">Ecom </Link>
+        <Link to="/resume-react/Feature">Feature </Link>
+        <Link to="/resume-react/Resume">Resume</Link>
       </nav>
       <Routes>
-        <Route path="/Ecom" element={< Ecom />} />
-        <Route path="/Feature" element={< Feature />} />
-        <Route path="/Resume" element={< Resume />} />
+        <Route path="/resume-react/Ecom" element={< Ecom />} />
+        <Route path="/resume-react/Feature" element={< Feature />} />
+        <Route path="/resume-react/Resume" element={< Resume />} />
+
+        <Route path="/" element={< Ecom />} />
+        <Route path="*" element={< Feature />} />
+        {/* <Route path="/Feature" element={< Feature />} /> */}
+        {/* <Route path="/Resume" element={< Resume />} /> */}
+
       </Routes>
     </div>
 
