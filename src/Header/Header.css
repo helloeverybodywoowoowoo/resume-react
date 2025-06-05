@@ -1,0 +1,26 @@
+header{
+    display: flex;
+    flex-direction: row;
+    border: brown 1px solid ;
+    width: 100%;
+}
+
+header img{
+    width: 10%;
+    height: auto;
+}
+
+.loging{
+    width:30%;
+    border: 4px green solid; 
+    text-align: center ;
+}
+
+.navstyle{
+    padding: 1em;
+    background: #eee;
+    width: 60% ;
+
+}
+
+

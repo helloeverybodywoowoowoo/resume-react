@@ -1,22 +1,15 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import './App.css'
 import Ecom from './pages/Ecom/Ecom'
 import Feature from './pages/Feature/Feature'
 import Resume from './pages/Resume/Resume'
+import Header from './Header/Header'
 
 
 export default function App() {
   return (
-    <div>
-      {/* TODO: add a home page */}
-    
-      <nav style={{ padding: '1em', background: '#eee'}}>
-        {/* <Link to="/Ecom" style={{ marginRight: 'irem' }}>Ecom </Link>
-        <Link to="/Feature" style={{ marginRight: 'lrem' }}>Feature </Link> */}
-        <Link to="/resume-react/Ecom">Ecom </Link>
-        <Link to="/resume-react/Feature">Feature </Link>
-        <Link to="/resume-react/Resume">Resume</Link>
-      </nav>
+    <>
+      <Header />
       <Routes>
         <Route path="/resume-react/Ecom" element={< Ecom />} />
         <Route path="/resume-react/Feature" element={< Feature />} />
@@ -28,8 +21,7 @@ export default function App() {
         {/* <Route path="/Resume" element={< Resume />} /> */}
 
       </Routes>
-    </div>
-
+    </>
   )
 }
 
