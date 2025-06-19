@@ -8,19 +8,21 @@ function Header() {
   const [name, setName] = useState("KASH");
   return (
     <> 
-           {/* TODO: add a home page */}
     <header>
       {/* Brand image here */}
 
-      <img src="https://via.placeholder.com/150" alt="Brand Logo" style={{ height: '50px', margin: '1em' }} />
+      <img src= "https://via.placeholder.com/150" alt="Brand Logo" style={{ height: '50px', margin: '1em' }} />
+      <img src= "SKULL.png" alt="skulll logo" style={{ height: '50px', margin: '1em' }} />
+
 
       <nav className="navstyle">
         {/* this is the header ^ should include the brand image (logo) and the login section*/}
         {/* <Link to="/Ecom" style={{ marginRight: 'irem' }}>Ecom </Link>
         <Link to="/Feature" style={{ marginRight: 'lrem' }}>Feature </Link> */}
-        <Link to="/resume-react/Ecom">Ecom </Link>
-        <Link to="/resume-react/Feature">Feature </Link>
-        <Link to="/resume-react/Resume">Resume</Link>
+        <Link to="/resume-react/">Home</Link>
+        <Link to="/resume-react/Ecom"> Ecom </Link>
+        <Link to="/resume-react/Feature"> Feature </Link>
+        <Link to="/resume-react/Resume"> Resume </Link>
       </nav>
 
       <div className="loging" >
