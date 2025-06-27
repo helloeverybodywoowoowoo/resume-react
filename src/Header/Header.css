@@ -1,26 +1,44 @@
-header{
+header {
     display: flex;
     flex-direction: row;
-    border: brown 1px solid ;
+    justify-content: space-between; /* spreads children across the row */
+    align-items: center;
+    border: rgba(13, 255, 65, 0.476) 1px solid;
     width: 100%;
+    box-sizing: border-box;
+    padding: 0 1em; /* optional: adds a little breathing room */
 }
 
-header img{
-    width: 10%;
+header img {
+    width: auto;
     height: auto;
+    animation: swing 2s ease-in-out infinite;
+    transform-origin: center center;
 }
 
-.loging{
-    width:30%;
-    border: 4px green solid; 
-    text-align: center ;
-}
-
-.navstyle{
+.navstyle {
+    flex: 1; /* this makes it grow and fill available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
     padding: 1em;
     background: #eee;
-    width: 60% ;
-
+    /* border: 4px turquoise solid; */
 }
 
+.loging {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    padding: 1em;
+    background: #eee;
+    width: fit-content; /* allow it to size based on content */
+    /* border: 4px turquoise solid; */
+    text-align: center;
 
+
+}

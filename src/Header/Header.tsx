@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logo from '../assets/logo.png'
 import { Link } from 'react-router-dom';
 import './Header.css';
 
@@ -6,13 +7,15 @@ function Header() {
   // Mock login state
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [name, setName] = useState("KASH");
+  const [registering, setRegistering] = useState(false);
+  const [newName, setNewName] = useState("");
+  
   return (
     <> 
     <header>
       {/* Brand image here */}
-
-      <img src= "https://via.placeholder.com/150" alt="Brand Logo" style={{ height: '50px', margin: '1em' }} />
-      <img src= "SKULL.png" alt="skulll logo" style={{ height: '50px', margin: '1em' }} />
+      {/*<img src= "https://via.placeholder.com/150" alt="Brand Logo" style={{ height: '50px', margin: '1em' }} /> */}
+      <img src= {logo} alt="logo" style={{ height: '50px', width:'50px' ,  margin: '1em' }} />
 
 
       <nav className="navstyle">
@@ -37,8 +40,7 @@ function Header() {
             </span>
           ) : (
             <>
-              <span
-                style={{ float: 'right', marginRight: '1em', cursor: 'pointer' }}
+              <span style={{ float: 'right', marginRight: '1em', cursor: 'pointer' }}
                 onClick={() => setIsLoggedIn(true)}
               >
                 Login
@@ -46,11 +48,33 @@ function Header() {
               <span style={{ float: 'right', marginRight: '1em' }}>
                 Register
               </span>
+              {registering && (
+                <div style={{ marginTop: '1em', width: '100%' }}>
+                  <input
+                    type="text"
+                    value={newName}
+                    placeholder="Enter your name"
+                    onChange={(e) => setNewName(e.target.value)}
+                  />
+                  <button
+                    style={{ marginLeft: '0.5em' }}
+                    onClick={() => {
+                      if (newName.trim() !== "") {
+                        setName(newName.trim());
+                        setRegistering(false);
+                        setNewName("");
+                      }
+                    }}
+                  >
+                    Submit
+                  </button>
+                </div>
+              )}
             </>
           )}
       </div>        
     </header>
     </>
-    )
+    );
 }
 export default Header;
