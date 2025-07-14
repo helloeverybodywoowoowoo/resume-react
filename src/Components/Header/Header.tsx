@@ -9,29 +9,29 @@ function Header() {
   const [name, setName] = useState("KASH");
   const [registering, setRegistering] = useState(false);
   const [newName, setNewName] = useState("");
-  
+
   return (
-    <> 
-    <header>
-      {/* Brand image here */}
-      {/*<img src= "https://via.placeholder.com/150" alt="Brand Logo" style={{ height: '50px', margin: '1em' }} /> */}
-      <img src= {logo} alt="logo" style={{ height: '50px', width:'50px' ,  margin: '1em' }} />
+    <>
+      <header>
+        {/* Brand image here */}
+        {/*<img src= "https://via.placeholder.com/150" alt="Brand Logo" style={{ height: '50px', margin: '1em' }} /> */}
+        <img src={logo} alt="logo" style={{ height: '50px', width: '50px', margin: '1em' }} />
 
-      <nav className="navstyle">
-        {/* this is the header ^ should include the brand image (logo) and the login section*/}
-        {/* <Link to="/Ecom" style={{ marginRight: 'irem' }}>Ecom </Link>
+        <nav className="navstyle">
+          {/* this is the header ^ should include the brand image (logo) and the login section*/}
+          {/* <Link to="/Ecom" style={{ marginRight: 'irem' }}>Ecom </Link>
         <Link to="/Feature" style={{ marginRight: 'lrem' }}>Feature </Link> */}
-        <Link to="/resume-react/">Home</Link>
-        <Link to="/resume-react/Ecom"> Ecom </Link>
-        <Link to="/resume-react/Feature"> Feature </Link>
-        <Link to="/resume-react/Resume"> Resume </Link>
-      </nav>
+          <Link to="/resume-react/">Home</Link>
+          <Link to="/resume-react/Ecom"> Ecom </Link>
+          <Link to="/resume-react/Feature"> Feature </Link>
+          <Link to="/resume-react/Resume"> Resume </Link>
+        </nav>
 
-      <div className="loging" >
-        {/* Mock login/logout toggle */}
-        {isLoggedIn ? (
+        <div className="loging" >
+          {/* Mock login/logout toggle */}
+          {isLoggedIn ? (
             <span
-              style={{ float: 'right', marginRight: '1em', cursor: 'pointer', color: 'black'}}
+              style={{ float: 'right', marginRight: '1em', cursor: 'pointer', color: 'black' }}
               onClick={() => setIsLoggedIn(false)}
             >
               <span> Welcome {name} </span> &nbsp;
@@ -44,11 +44,14 @@ function Header() {
               >
                 Login
               </span>
-              <span style={{ float: 'right', marginRight: '1em', color: 'black' }}>
+              <span
+                style={{ float: 'right', marginRight: '1em', color: 'black', cursor: 'pointer' }}
+                onClick={() => setRegistering(!registering)}
+              >
                 Register
               </span>
               {registering && (
-                <div style={{ marginTop: '1em', width: '100%', color: 'black'}}>
+                <div style={{ marginTop: '1em', width: '100%', color: 'black' }}>
                   <input
                     type="text"
                     value={newName}
@@ -71,9 +74,9 @@ function Header() {
               )}
             </>
           )}
-      </div>        
-    </header>
+        </div>
+      </header>
     </>
-    );
+  );
 }
 export default Header;
