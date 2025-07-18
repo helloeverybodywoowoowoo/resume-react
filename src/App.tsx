@@ -4,8 +4,8 @@ import Home from './pages/Home/Home'
 import Ecom from './pages/Ecom/Ecom'
 import Feature from './pages/Feature/Feature'
 import Resume from './pages/Resume/Resume'
-import Header from './Components/Header/Header' // move to components folder
-import Footer from './Components/Footer/Footer' // move to components folder
+import Header from './Components/Header/Header' // moved to components folder
+import Footer from './Components/Footer/Footer' // moved to components folder
 
 
 export default function App() {

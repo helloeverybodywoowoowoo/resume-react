@@ -1,9 +1,9 @@
-function Footer (){
-    return(
+function Footer() {
+    return (
         <>
-        <div>
-        Hey Footer
-        </div>
+            <div>
+                <p>&copy; {new Date().getFullYear()} K.A. - akinsadekash@gmail.com - =0]</p>
+            </div>
         </>
     )
 }
