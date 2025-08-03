@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ProductCard } from "../ProductCard/ProductCard";
-import { products } from "../../Data/productslisting";
+import type { Product } from "../../Data/Product";
 
 export const ProductGrid: React.FC = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    // Fetch product data from an API endpoint
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/products");
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+    
+
+    fetchProducts();
+  }, []);
+
   return (
     <div
       style={{
@@ -13,7 +31,6 @@ export const ProductGrid: React.FC = () => {
         padding: "24px",
       }}
     >
-      {/* // The .map is an automatic for loop that generates info  */}
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
