@@ -16,6 +16,25 @@ header img {
     transform-origin: center center;
 }
 
+@keyframes rattle {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(10deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(10deg); }
+  80% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes grow {
+  0% { transform: scale(1); }
+  100% { transform: scale(19.5); }
+}
+
+.logo-rattle:hover {
+  animation: rattle 0.2s infinite ease-in-out, grow 1s infinite linear;
+  transform-origin: center;
+}
+
 .navstyle {
     flex: 1; /* this makes it grow and fill available space */
     display: flex;

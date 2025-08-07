@@ -11,4 +11,3 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     </BrowserRouter>
   </StrictMode>
 )
-//in AI im gonna ask how to add and remove prodcutts from the ecom page in code like i would in postman, go piece by piece 

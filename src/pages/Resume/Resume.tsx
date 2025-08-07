@@ -9,8 +9,11 @@ function Resume() {
         <header>
           <h1 className="name">Kashope Akinsade</h1>
           <p className="headline">Full-Stack JavaScript Developer</p>
-        </header>
 
+        </header>
+        <section className="contact-info">
+          <p><strong>Email:</strong> akinsadekash@gmail.com <strong> Phone:</strong> (240)-360-7625<strong> Github:</strong> https://tinyurl.com/5t4y63d3</p>
+        </section>
         <section className="resume-section">
           <h2>Professional Summary</h2>
           <p>
@@ -30,7 +33,26 @@ function Resume() {
           </ul>
         </section>
 
-        <section className="resume-section">
+        <section className="resume-section two-column">
+          <div className="column">
+            <h2>Education</h2>
+            <ul>
+              <li><strong>Claim Academy:</strong> Full-Stack JavaScript Bootcamp (24 weeks)</li>
+              <li><strong>University of Maryland, Baltimore County (UMBC):</strong> B.S. in Information Systems (2022)</li>
+              <li><strong>Additional Courses:</strong> MongoDB Integration, TypeScript Deep Dive</li>
+            </ul>
+          </div>
+          <div className="column">
+            <h2>Professional Experience</h2>
+            <ul>
+              <li><strong>Freelance Developer:</strong> Built React/Express apps with dynamic UI and RESTful APIs</li>
+              <li><strong>Quality Associates Inc. - Document Prep Specialists</strong> Prepared, compiled and transfered doccuments for data entry</li>
+              <li><strong>MADEL LLC. - Data Analyst </strong> Applied concepts in Statistical Data Analysis and Computer Information Systems to improve reporting </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* <section className="resume-section">
           <h2>Bootcamp Coursework</h2>
           <div className="course-columns">
             <ul>
@@ -44,7 +66,7 @@ function Resume() {
               <li><strong>Workflow:</strong> Agile, Pair Programming, Deployment Best Practices</li>
             </ul>
           </div>
-        </section>
+        </section> */}
 
         <section className="resume-section">
           <h2>Additional Tools & Tech</h2>

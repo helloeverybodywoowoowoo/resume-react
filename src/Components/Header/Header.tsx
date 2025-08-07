@@ -15,7 +15,7 @@ function Header() {
       <header>
         {/* Brand image here */}
         {/*<img src= "https://via.placeholder.com/150" alt="Brand Logo" style={{ height: '50px', margin: '1em' }} /> */}
-        <img src={logo} alt="logo" style={{ height: '50px', width: '50px', margin: '1em' }} />
+        <img src={logo} alt="logo" className="logo-rattle" style={{ height: '50px', width: '50px', margin: '1em' }} />
 
         <nav className="navstyle">
           {/* this is the header ^ should include the brand image (logo) and the login section*/}
